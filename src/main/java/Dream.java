@@ -19,7 +19,7 @@ public class Dream {
 
         s3 = Double.toString((s1 + s2));
         //if(s3)
-            //s3.append(s3.charAt("0."));
+            //s3.append(s3.charAt("0."));\\\\
         System.out.println(s3);
 
 
