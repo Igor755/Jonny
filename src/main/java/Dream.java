@@ -7,6 +7,10 @@ import java.util.Scanner;
 public class Dream {
     public static void main(String[] args){
 
+        Grafics app = new Grafics();
+        app.setVisible(true);
+
+/*
         Scanner scanner = new Scanner(System.in);
 
         double s1,s2;
@@ -23,6 +27,6 @@ public class Dream {
         System.out.println(s3);
 
 
-
+*/
     }
 }
