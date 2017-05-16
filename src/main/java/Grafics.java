@@ -11,16 +11,60 @@ import javax.swing.*;
  */
 public class Grafics extends JFrame {
 
-    private JTextField input = new JTextField("", 5);
-    private JLabel label = new JLabel("Machine");
-    private JButton button = new JButton("Press");
+    private JTextField input = new JTextField("", 10);
+    private JLabel label = new JLabel("Jonik MT890");
+    Font myFont = new Font("Serif", Font.BOLD, 50);
+
+
+    private JButton button1 = new JButton("1");
+    private JButton button2 = new JButton("2");
+    private JButton button3 = new JButton("3");
+    private JButton button4 = new JButton("4");
+    private JButton button5 = new JButton("5");
+    private JButton button6 = new JButton("6");
+    private JButton button7 = new JButton("7");
+    private JButton button8 = new JButton("8");
+    private JButton button9 = new JButton("9");
+    private JButton button0 = new JButton("0");
+    private JButton buttont = new JButton(".");
+    private JButton buttonm = new JButton("-");
+    private JButton buttonp = new JButton("+");
+    private JButton buttonu = new JButton("*");
+    private JButton buttond = new JButton("/");
+    private JButton buttonr = new JButton("=");
 
     public Grafics() {
 
+        label.setLocation(100,100);
+        label.setSize(280, 230);
+        label.setFont(myFont);
+
         Container container = this.getContentPane();
-        container.setLayout(new GridLayout(3,2,2,2));
-        container.add(label);
+        container.setLayout(new GridLayout(10,2,2,2));
+
         container.add(input);
+        container.add(label);
+
+
+        container.add(button1);
+        container.add(button2);
+        container.add(button3);
+        container.add(button4);
+        container.add(button5);
+        container.add(button6);
+        container.add(button7);
+        container.add(button8);
+        container.add(button9);
+        container.add(button0);
+        container.add(buttonm);
+        container.add(buttonp);
+        container.add(buttonu);
+        container.add(buttont);
+        container.add(buttond);
+        container.add(buttonr);
+
+
+
 
 
 
