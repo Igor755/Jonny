@@ -32,15 +32,16 @@ public class Grafics extends JFrame {
     private JButton buttonu = new JButton("*");
     private JButton buttond = new JButton("/");
     private JButton buttonr = new JButton("=");
+    private JButton buttonC = new JButton("C");
 
     public Grafics() {
 
-        label.setLocation(100,100);
+        label.setLocation(100, 100);
         label.setSize(280, 230);
         label.setFont(myFont);
 
         Container container = this.getContentPane();
-        container.setLayout(new GridLayout(10,2,2,2));
+        container.setLayout(new GridLayout(10, 2, 2, 2));
 
         container.add(input);
         container.add(label);
@@ -62,14 +63,94 @@ public class Grafics extends JFrame {
         container.add(buttont);
         container.add(buttond);
         container.add(buttonr);
+        container.add(buttonC);
 
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"1");
+            }
+        });
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"2");
 
+            }
+        });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"3");
 
+            }
+        });
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"4");
 
+            }
+        });
+        button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"5");
 
+            }
+        });
+        button6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"6");
 
+            }
+        });
+        button7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"7");
 
+            }
+        });
+        button8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"8");
+
+            }
+        });
+        button9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"9");
+
+            }
+        });
+        button0.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+"0");
+
+            }
+        });
+        buttonC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String temp = input.getText();
+                input.setText(temp.substring(0,temp.length()-1));
+            }
+        });
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
