@@ -34,7 +34,7 @@ public class Grafics extends JFrame {
     private JButton buttonr = new JButton("=");
     private JButton buttonC = new JButton("C");
 
-    int firstValue  = 0;
+    double firstValue  = 0;
     String operation = "+";
 
     public Grafics() {
@@ -147,7 +147,7 @@ public class Grafics extends JFrame {
         buttond.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstValue = Integer.valueOf(input.getText());
+                firstValue = Double.valueOf(input.getText());
                 input.setText("");
                 operation = "/";
             }
@@ -155,7 +155,7 @@ public class Grafics extends JFrame {
         buttonp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstValue = Integer.valueOf(input.getText());
+                firstValue = Double.valueOf(input.getText());
                 input.setText("");
                 operation = "+";
             }
@@ -163,7 +163,7 @@ public class Grafics extends JFrame {
         buttonm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstValue = Integer.valueOf(input.getText());
+                firstValue = Double.valueOf(input.getText());
                 input.setText("");
                 operation = "-";
             }
@@ -171,15 +171,22 @@ public class Grafics extends JFrame {
         buttonu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstValue = Integer.valueOf(input.getText());
+                firstValue = Double.valueOf(input.getText());
                 input.setText("");
                 operation = "*";
+            }
+        });
+        buttont.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input.setText(input.getText()+".");
+
             }
         });
         buttonr.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int secondValue = Integer.valueOf(input.getText());
+                double secondValue = Double.valueOf(input.getText());
                 if("+".equals(operation)){
                     input.setText((firstValue+secondValue)+"");
                 }
