@@ -1,5 +1,7 @@
 package main.java;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.EventListener;
 import java.awt.event.*;
 import java.awt.*;
@@ -11,10 +13,11 @@ import javax.swing.*;
  */
 public class Grafics extends JFrame {
 
-    private JTextField input = new JTextField("", 10);
+    /*private JTextField input = new JTextField("", 10);
     private JLabel label = new JLabel("Jonik MT890");
     Font myFont = new Font("Serif", Font.BOLD, 50);
 
+    //BigDecimal bigDecimal = new BigDecimal(input.toString());
 
     private JButton button1 = new JButton("1");
     private JButton button2 = new JButton("2");
@@ -38,6 +41,10 @@ public class Grafics extends JFrame {
     String operation = "+";
 
     public Grafics() {
+
+        DecimalFormat format = new DecimalFormat();
+
+        format.setDecimalSeparatorAlwaysShown(false);
 
         label.setLocation(100, 100);
         label.setSize(280, 230);
@@ -156,6 +163,7 @@ public class Grafics extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 firstValue = Double.valueOf(input.getText());
+
                 input.setText("");
                 operation = "+";
             }
@@ -164,6 +172,7 @@ public class Grafics extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 firstValue = Double.valueOf(input.getText());
+                //format.format(input.getText());
                 input.setText("");
                 operation = "-";
             }
@@ -204,10 +213,10 @@ public class Grafics extends JFrame {
             }
         });
 
-
+*/
     }
 
-}
+
 
 
 
