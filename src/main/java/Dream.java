@@ -14,13 +14,15 @@ public class Dream {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("first");
-        String first = scanner.next();
+        Double first = scanner.nextDouble();
         //double First = Double.parseDouble(first);
         System.out.println("two");
-        String two = scanner.next();
+        Double two = scanner.nextDouble();
         //double Two = Double.parseDouble(two);
+        //String s = Double.toString(first + two);
 
-        System.out.println(Double.parseDouble(first + two));
+
+        System.out.println(String.format(Double.toString(first + two)));
 
     }
 }
