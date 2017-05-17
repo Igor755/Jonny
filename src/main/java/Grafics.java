@@ -34,6 +34,9 @@ public class Grafics extends JFrame {
     private JButton buttonr = new JButton("=");
     private JButton buttonC = new JButton("C");
 
+    int firstValue  = 0;
+    String operation = "+";
+
     public Grafics() {
 
         label.setLocation(100, 100);
@@ -141,6 +144,60 @@ public class Grafics extends JFrame {
                 input.setText(temp.substring(0,temp.length()-1));
             }
         });
+        buttond.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                firstValue = Integer.valueOf(input.getText());
+                input.setText("");
+                operation = "/";
+            }
+        });
+        buttonp.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                firstValue = Integer.valueOf(input.getText());
+                input.setText("");
+                operation = "+";
+            }
+        });
+        buttonm.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                firstValue = Integer.valueOf(input.getText());
+                input.setText("");
+                operation = "-";
+            }
+        });
+        buttonu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                firstValue = Integer.valueOf(input.getText());
+                input.setText("");
+                operation = "*";
+            }
+        });
+        buttonr.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int secondValue = Integer.valueOf(input.getText());
+                if("+".equals(operation)){
+                    input.setText((firstValue+secondValue)+"");
+                }
+                if("-".equals(operation)){
+                    input.setText((firstValue-secondValue)+"");
+                }
+                if("*".equals(operation)){
+                    input.setText((firstValue*secondValue)+"");
+                }
+                if("/".equals(operation)){
+                    input.setText((firstValue/secondValue)+"");
+                }
+                firstValue = 0;
+                operation = "+";
+            }
+        });
+
+
     }
 
 }
