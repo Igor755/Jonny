@@ -13,18 +13,18 @@ public class Dream {
         app.setVisible(true);
 */
 
+        NumberFormat nf = new DecimalFormat("#.######");
+        //работает через запяту, через точку выбивает Exception()
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("first");
         Double first = scanner.nextDouble();
-        //double First = Double.parseDouble(first);
+
         System.out.println("two");
         Double two = scanner.nextDouble();
-        //double Two = Double.parseDouble(two);
-        //String s = Double.toString(first + two);
-        NumberFormat nf = new DecimalFormat("#.######");
 
         System.out.println(nf.format(first + two));
+        //не забывать закрывать поток, иначе продолжает работать
        scanner.close();
     }
 }
