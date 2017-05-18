@@ -1,5 +1,7 @@
 package main.java;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Scanner;
 /**
  * Created by i.metlin on 11.05.2017.
@@ -20,9 +22,9 @@ public class Dream {
         Double two = scanner.nextDouble();
         //double Two = Double.parseDouble(two);
         //String s = Double.toString(first + two);
+        NumberFormat nf = new DecimalFormat("#.######");
 
-
-        System.out.println(String.format(Double.toString(first + two)));
-
+        System.out.println(nf.format(first + two));
+       scanner.close();
     }
 }
