@@ -2,6 +2,7 @@ package main.java;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.EventListener;
 import java.awt.event.*;
 import java.awt.*;
@@ -12,8 +13,8 @@ import javax.swing.*;
  * Created by i.metlin on 12.05.2017.
  */
 public class Grafics extends JFrame {
-
-    /*private JTextField input = new JTextField("", 10);
+/*
+    private JTextField input = new JTextField("", 10);
     private JLabel label = new JLabel("Jonik MT890");
     Font myFont = new Font("Serif", Font.BOLD, 50);
 
@@ -42,9 +43,7 @@ public class Grafics extends JFrame {
 
     public Grafics() {
 
-        DecimalFormat format = new DecimalFormat();
-
-        format.setDecimalSeparatorAlwaysShown(false);
+        NumberFormat nf = new DecimalFormat("#.######");
 
         label.setLocation(100, 100);
         label.setSize(280, 230);
@@ -78,69 +77,69 @@ public class Grafics extends JFrame {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"1");
+                input.setText(input.getText() + "1");
             }
         });
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"2");
+                input.setText(input.getText() + "2");
 
             }
         });
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"3");
+                input.setText(input.getText() + "3");
 
             }
         });
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"4");
+                input.setText(input.getText() + "4");
 
             }
         });
         button5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"5");
+                input.setText(input.getText() + "5");
 
             }
         });
         button6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"6");
+                input.setText(input.getText() + "6");
 
             }
         });
         button7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"7");
+                input.setText(input.getText() + "7");
 
             }
         });
         button8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"8");
+                input.setText(input.getText() + "8");
 
             }
         });
         button9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"9");
+                input.setText(input.getText() + "9");
 
             }
         });
         button0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+"0");
+                input.setText(input.getText() + "0");
 
             }
         });
@@ -148,7 +147,7 @@ public class Grafics extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String temp = input.getText();
-                input.setText(temp.substring(0,temp.length()-1));
+                input.setText(temp.substring(0, temp.length() - 1));
             }
         });
         buttond.addActionListener(new ActionListener() {
@@ -188,7 +187,7 @@ public class Grafics extends JFrame {
         buttont.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText()+".");
+                input.setText(input.getText() + ",");
 
             }
         });
@@ -196,25 +195,29 @@ public class Grafics extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 double secondValue = Double.valueOf(input.getText());
-                if("+".equals(operation)){
-                    input.setText((firstValue+secondValue)+"");
+                if ("+".equals(operation)) {
+                    input.setText((firstValue + secondValue) + "");
+                    nf.format(input);
                 }
-                if("-".equals(operation)){
-                    input.setText((firstValue-secondValue)+"");
+                if ("-".equals(operation)) {
+                    input.setText((firstValue - secondValue) + "");
+                    nf.format(input);
                 }
-                if("*".equals(operation)){
-                    input.setText((firstValue*secondValue)+"");
+                if ("*".equals(operation)) {
+                    input.setText((firstValue * secondValue) + "");
+                    nf.format(input);
                 }
-                if("/".equals(operation)){
-                    input.setText((firstValue/secondValue)+"");
+                if ("/".equals(operation)) {
+                    input.setText((firstValue / secondValue) + "");
+                    nf.format(input);
                 }
                 firstValue = 0;
                 operation = "+";
             }
-        });
-
-*/
+        });*/
     }
+
+
 
 
 
