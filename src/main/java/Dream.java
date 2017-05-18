@@ -17,9 +17,9 @@ import java.util.Scanner;
 public class Dream {
     public static void main(String[] args){
 
-        //Grafics app = new Grafics();
-        //app.setVisible(true);
-
+        Grafics app = new Grafics();
+        app.setVisible(true);
+/*
         DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.US);
         String pattern = "#.######";
         DecimalFormat decimalFormat = new DecimalFormat(pattern, otherSymbols);
@@ -37,7 +37,7 @@ public class Dream {
         System.out.println(decimalFormat.format(first + two));
 
        scanner.close();
-
+*/
 
     }
 }

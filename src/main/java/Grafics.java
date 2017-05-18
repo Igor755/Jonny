@@ -2,10 +2,12 @@ package main.java;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.EventListener;
 import java.awt.event.*;
 import java.awt.*;
+import java.util.Locale;
 import javax.swing.*;
 
 
@@ -13,7 +15,7 @@ import javax.swing.*;
  * Created by i.metlin on 12.05.2017.
  */
 public class Grafics extends JFrame {
-/*
+
     private JTextField input = new JTextField("", 10);
     private JLabel label = new JLabel("Jonik MT890");
     Font myFont = new Font("Serif", Font.BOLD, 50);
@@ -38,12 +40,21 @@ public class Grafics extends JFrame {
     private JButton buttonr = new JButton("=");
     private JButton buttonC = new JButton("C");
 
+    DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.US);
+    String pattern = "#.######";
+    DecimalFormat decimalFormat = new DecimalFormat(pattern, otherSymbols);
+
     double firstValue  = 0;
+
+
+
     String operation = "+";
 
     public Grafics() {
 
-        NumberFormat nf = new DecimalFormat("#.######");
+        decimalFormat.format(firstValue);
+
+        //NumberFormat nf = new DecimalFormat("#.######");
 
         label.setLocation(100, 100);
         label.setSize(280, 230);
@@ -73,6 +84,9 @@ public class Grafics extends JFrame {
         container.add(buttond);
         container.add(buttonr);
         container.add(buttonC);
+
+
+
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -154,6 +168,7 @@ public class Grafics extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 firstValue = Double.valueOf(input.getText());
+
                 input.setText("");
                 operation = "/";
             }
@@ -171,7 +186,7 @@ public class Grafics extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 firstValue = Double.valueOf(input.getText());
-                //format.format(input.getText());
+
                 input.setText("");
                 operation = "-";
             }
@@ -187,37 +202,44 @@ public class Grafics extends JFrame {
         buttont.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText() + ",");
+                input.setText(input.getText() + ".");
 
             }
         });
         buttonr.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 double secondValue = Double.valueOf(input.getText());
+
+
                 if ("+".equals(operation)) {
+
                     input.setText((firstValue + secondValue) + "");
-                    nf.format(input);
+                    decimalFormat.format(input);
+
+
                 }
                 if ("-".equals(operation)) {
                     input.setText((firstValue - secondValue) + "");
-                    nf.format(input);
+
                 }
                 if ("*".equals(operation)) {
                     input.setText((firstValue * secondValue) + "");
-                    nf.format(input);
+
                 }
                 if ("/".equals(operation)) {
                     input.setText((firstValue / secondValue) + "");
-                    nf.format(input);
+
                 }
                 firstValue = 0;
                 operation = "+";
+
             }
-        });*/
+        });
     }
 
-
+}
 
 
 
