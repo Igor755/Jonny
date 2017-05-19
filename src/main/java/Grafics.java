@@ -22,7 +22,7 @@ public class Grafics extends JFrame {
 
     private JTextField input = new JTextField("", 10);
     private JLabel label = new JLabel("Jonik MT890");
-    Font myFont = new Font("Serif", Font.BOLD, 50);
+    Font myFont = new Font("Serif", Font.BOLD, 40);
 
     //BigDecimal bigDecimal = new BigDecimal(input.toString());
 
@@ -224,8 +224,6 @@ public class Grafics extends JFrame {
                     input.setText((firstValue + secondValue) + "");
                     String s = decimalFormat.format(firstValue + secondValue);
                     input.setText(s);
-
-
 
                 }
                 if ("-".equals(operation)) {
