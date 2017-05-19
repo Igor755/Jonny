@@ -1,17 +1,18 @@
 package main.java;
 
-import java.math.BigDecimal;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
-import java.util.EventListener;
+
 import java.awt.event.*;
 import java.awt.*;
 import java.util.Locale;
 import javax.swing.*;
 
 
-//чтобы перевести текст из окна
+//чтобы перевести текст из окна input пришлось создать д/п переменную String
+//String del = decimalFormat.format(firstValue / secondValue);
+//input.setText(del);
 
 
 /**
@@ -216,10 +217,7 @@ public class Grafics extends JFrame {
                 double secondValue = Double.valueOf(input.getText());
 
 
-
                 if ("+".equals(operation)) {
-
-
 
 
 
@@ -250,7 +248,7 @@ public class Grafics extends JFrame {
                 }
                 firstValue = 0;
                 operation = "+";
-                //decimalFormat.format(input.getText());
+
 
 
 
