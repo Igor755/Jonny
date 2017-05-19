@@ -222,14 +222,14 @@ public class Grafics extends JFrame {
 
 
                     input.setText((firstValue + secondValue) + "");
-                    String s = decimalFormat.format(firstValue + secondValue);
-                    input.setText(s);
+                    String pl = decimalFormat.format(firstValue + secondValue);
+                    input.setText(pl);
 
                 }
                 if ("-".equals(operation)) {
                     input.setText((firstValue - secondValue) + "");
-                    String k = decimalFormat.format(firstValue - secondValue);
-                    input.setText(k);
+                    String min = decimalFormat.format(firstValue - secondValue);
+                    input.setText(min);
 
                 }
                 if ("*".equals(operation)) {
