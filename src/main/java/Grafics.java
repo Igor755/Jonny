@@ -11,6 +11,9 @@ import java.util.Locale;
 import javax.swing.*;
 
 
+//чтобы перевести текст из окна
+
+
 /**
  * Created by i.metlin on 12.05.2017.
  */
@@ -213,27 +216,43 @@ public class Grafics extends JFrame {
                 double secondValue = Double.valueOf(input.getText());
 
 
+
                 if ("+".equals(operation)) {
 
+
+
+
+
                     input.setText((firstValue + secondValue) + "");
-                    decimalFormat.format(input);
+                    String s = decimalFormat.format(firstValue + secondValue);
+                    input.setText(s);
+
 
 
                 }
                 if ("-".equals(operation)) {
                     input.setText((firstValue - secondValue) + "");
+                    String k = decimalFormat.format(firstValue - secondValue);
+                    input.setText(k);
 
                 }
                 if ("*".equals(operation)) {
                     input.setText((firstValue * secondValue) + "");
+                    String um = decimalFormat.format(firstValue * secondValue);
+                    input.setText(um);
 
                 }
                 if ("/".equals(operation)) {
                     input.setText((firstValue / secondValue) + "");
+                    String del = decimalFormat.format(firstValue / secondValue);
+                    input.setText(del);
 
                 }
                 firstValue = 0;
                 operation = "+";
+                //decimalFormat.format(input.getText());
+
+
 
             }
         });
