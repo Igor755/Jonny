@@ -13,7 +13,7 @@ import javax.swing.*;
 //чтобы перевести текст из окна input пришлось создать д/п переменную String
 //String del = decimalFormat.format(firstValue / secondValue);
 //input.setText(del);
-//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);--------закрытие программы просто прописать.
+//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);--------закрытие программы просто прописать в конструкторе.
 
 
 /**
@@ -170,7 +170,12 @@ public class Grafics extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String temp = input.getText();
+                if (temp == "")
+                {
+                   // input.setText("");
+                }
                 input.setText(temp.substring(0, temp.length() - 1));
+
             }
         });
         buttond.addActionListener(new ActionListener() {
