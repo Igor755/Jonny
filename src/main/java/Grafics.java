@@ -9,11 +9,17 @@ import java.awt.*;
 import java.util.Locale;
 import javax.swing.*;
 
+/*
+1)чтобы перевести текст из окна input пришлось создать д/п переменную String
+String del = decimalFormat.format(firstValue / secondValue);
+input.setText(del);
 
-//чтобы перевести текст из окна input пришлось создать д/п переменную String
-//String del = decimalFormat.format(firstValue / secondValue);
-//input.setText(del);
-//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);--------закрытие программы просто прописать в конструкторе.
+2)setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);--------закрытие программы просто прописать в конструкторе.
+
+3)установить фиксированный размер окна this.setResizable(false);
+  установка размеров окна container.setSize(500,400);
+                           this.pack();
+                           this.setSize(500,400);
 
 
 /**
@@ -67,6 +73,12 @@ public class Grafics extends JFrame {
 
         Container container = this.getContentPane();
         container.setLayout(new GridLayout(10, 2, 2, 2));
+
+        container.setSize(500,400);
+        this.pack();
+        this.setSize(500,400);
+        this.setResizable(false);
+
 
         container.add(input);
         container.add(label);
@@ -218,11 +230,38 @@ public class Grafics extends JFrame {
             }
         });
         buttont.addActionListener(new ActionListener() {
+
+            String str = ".";
+            double num;
+
             @Override
+
+
             public void actionPerformed(ActionEvent e) {
-                input.setText(input.getText() + ".");
+
+                String line =input.getText();
+
+
+                
+
+
+                Character last = null;
+                String result = "";
+                for (Character c : input.getText().toCharArray()) {
+                    if (c.equals(last)) {
+                        continue;
+                    }
+                    result = result.concat(c.toString());
+                    last = c;
+                }
+                System.out.println(result);
+
+
 
             }
+
+
+
         });
         buttonr.addActionListener(new ActionListener() {
             @Override
