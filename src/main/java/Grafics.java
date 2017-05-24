@@ -100,6 +100,7 @@ public class Grafics extends JFrame {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 input.setText(input.getText() + "1");
             }
         });
@@ -170,11 +171,14 @@ public class Grafics extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String temp = input.getText();
-                if (temp == "")
-                {
-                   // input.setText("");
+                try{
+                    input.setText(temp.substring(0, temp.length() - 1));
                 }
-                input.setText(temp.substring(0, temp.length() - 1));
+                catch (Exception AWT){
+                    System.out.println("Empty");
+
+                }
+
 
             }
         });
@@ -228,8 +232,6 @@ public class Grafics extends JFrame {
 
 
                 if ("+".equals(operation)) {
-
-
 
                     input.setText((firstValue + secondValue) + "");
                     String pl = decimalFormat.format(firstValue + secondValue);
