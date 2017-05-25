@@ -229,39 +229,24 @@ public class Grafics extends JFrame {
                 operation = "*";
             }
         });
+
         buttont.addActionListener(new ActionListener() {
 
-            String str = ".";
-            double num;
 
             @Override
-
-
             public void actionPerformed(ActionEvent e) {
 
-                String line =input.getText();
+                //input.setText(input.getText() + "0");
 
-
-                
-
-
-                Character last = null;
-                String result = "";
-                for (Character c : input.getText().toCharArray()) {
-                    if (c.equals(last)) {
-                        continue;
+                if (кнопка == evt.getSource()) {
+                    if (!текстфилд.getText().contains(".")) {
+                        if  (!текстфилд.getText().equals("")){
+                            //ставим точку
+                        }
                     }
-                    result = result.concat(c.toString());
-                    last = c;
                 }
-                System.out.println(result);
-
-
 
             }
-
-
-
         });
         buttonr.addActionListener(new ActionListener() {
             @Override
