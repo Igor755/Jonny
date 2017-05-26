@@ -1,6 +1,10 @@
 package main.java;
 
 
+import javafx.event.*;
+
+import java.awt.Event;
+import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
@@ -20,6 +24,18 @@ input.setText(del);
   установка размеров окна container.setSize(500,400);
                            this.pack();
                            this.setSize(500,400);
+4)Подумай сам сначала, все легче чем ты думаешь-----ТОЧКА
+String line = input.getText();
+{
+if (line.contains("."))
+{
+input.setText(line);
+}
+else
+{
+//ставим точку
+input.setText(line + ".");
+}
 
 
 /**
@@ -238,15 +254,25 @@ public class Grafics extends JFrame {
 
                 //input.setText(input.getText() + "0");
 
-                if (кнопка == evt.getSource()) {
-                    if (!текстфилд.getText().contains(".")) {
-                        if  (!текстфилд.getText().equals("")){
-                            //ставим точку
-                        }
-                    }
-                }
+                String line = input.getText();
 
-            }
+                //if (buttont == e.getSource()) {
+
+                    if (line.contains(".")) {
+
+                        input.setText(line);
+                    }
+
+                     else
+                    {
+                            //ставим точку
+                            input.setText(line + ".");
+
+                        }
+              }
+
+
+
         });
         buttonr.addActionListener(new ActionListener() {
             @Override

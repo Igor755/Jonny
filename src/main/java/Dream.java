@@ -20,13 +20,6 @@ public class Dream {
         Grafics app = new Grafics();
         app.setVisible(true);
 
-
-
-
-
-
-
-
 /*
         DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.US);
         String pattern = "#.######";
