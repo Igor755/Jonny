@@ -30,7 +30,7 @@ public class ParamTest {
         System.out.println("After: b = " + b.getName());
 
 
-        
+
     }
 
     public static void tripleValue(double x) {
@@ -55,8 +55,10 @@ public class ParamTest {
 
 class Employe {
     public Employe(String n, double s) {
+
         name = n;
         salary = s;
+
     }
     public String getName(){
         return name;
@@ -65,6 +67,7 @@ class Employe {
         return  salary;
     }
     public  void raiseSalary(double byPercent){
+
         double raise = salary * byPercent / 100;
         salary += raise;
     }
